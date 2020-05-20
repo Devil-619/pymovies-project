@@ -1,0 +1,13 @@
+{% extends "movie/base.html" %}
+{% block title %}
+<title>About</title>
+{% endblock title %}
+{% block body %}
+<article class="media content-section">
+  <div class="media-body">
+    <h4 class="article-title mb-4 mt-2">About Us</h4>
+    <p class="article-content"><span style="color: #0000ff;">Py</span><span style="color: #f1c40f;">movies</span> is a python driven web application developed using <a href="https://www.djangoproject.com/" class="text-info">Django</a> framework.</p>
+    <p class="article-content">Our goal is to find the best movie to watch for you. We use a recommender system trained using <a href="https://en.wikipedia.org/wiki/Apriori_algorithm" class="text-info">Apriori algorithm</a> to provide the best results.</p>
+  </div>
+</article>
+{% endblock body %}

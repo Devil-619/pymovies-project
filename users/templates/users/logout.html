@@ -1,0 +1,14 @@
+{% extends "movie/base.html" %}
+{% block title %}
+<title>Logout</title>
+{% endblock title %}
+{% block body %}
+    <div class="alert alert-warning">
+        You have been logged out
+    </div>
+    <div class="border-top pt-3">
+        <small>
+            <a href="{% url 'login' %}" class="text-warning">Log In Again</a>
+        </small>
+    </div>
+{% endblock body %}

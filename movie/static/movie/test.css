@@ -1,0 +1,133 @@
+body {
+    background: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+    color: #4e342e;
+    margin-top: 5rem;
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #4e342e;
+}
+
+ul {
+    margin: 0;
+}
+
+.bg-steel {
+    background: linear-gradient(62deg, #FDFEFE 0%, #FBFCFC 100%);
+}
+
+.site-header .navbar-nav .nav-link {
+    color: #4e342e;
+}
+
+.nav-shadow {
+    box-shadow: 0px 0px 5px #ecf0f1;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+    background-color: #ecf0f1;
+    box-shadow: 0px 0px 5px #ecf0f1;
+    color: #4e342e;
+}
+
+.site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+}
+
+.content-section {
+    background: linear-gradient(62deg, #FDFEFE 0%, #FBFCFC 100%);
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 2px #919a9c;
+}
+
+.list-group-item-light {
+    background: linear-gradient(62deg, #FDFEFE 0%, #FBFCFC 100%);
+}
+
+.list-group-item-light:hover {
+    background-color: #ecf0f1;
+    color: #e74c3c;
+}
+
+.article-title {
+    color: #444444;
+}
+
+a.article-title:hover {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+.article-content {
+    white-space: pre-line;
+}
+
+.article-img {
+    height: 200px;
+    width: 126px;
+    margin-right: 16px;
+}
+
+.article-metadata {
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #e3e3e3
+}
+
+.article-metadata a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+.article-svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+.account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+
+.account-heading {
+    font-size: 2.5rem;
+}
+
+.autocomplete {
+    /*the container must be positioned relative:*/
+    position: relative;
+    display: inline-block;
+}
+
+.autocomplete-items {
+    position: absolute;
+    z-index: 1;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+.autocomplete-items div {
+    padding: 5px;
+    cursor: pointer;
+    background-color: #fff;
+}
+.autocomplete-items div:hover {
+    /*when hovering an item:*/
+    background-color: #e9e9e9;
+}
+.autocomplete-active {
+    /*when navigating through the items using the arrow keys:*/
+    border: 2px dodgerblue solid;
+    border-radius: 5px;
+}

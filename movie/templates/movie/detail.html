@@ -1,0 +1,51 @@
+{% extends "movie/base.html" %}
+{% block title %}
+<title>{{ current.title }}</title>
+{% endblock title %}
+{% block body %}
+<article class="media content-section">
+    <img class="rounded article-img"  src="{{ current.img_url }}" alt="movie_poster">
+    <div class="media-body">
+        <div class="article-metadata">
+            <h6 class="text-muted">{{ current.rating }}<small>/10</small></h6>
+        </div>
+        <h2 class="article-title">{{ current.title }}</h2>
+        <p class="article-content">{{ current.info }}</p>
+        {% if user.is_authenticated %}
+        <form action="" method="POST" style="padding: 10px 0px;" class="mb-2">
+            {% csrf_token %}
+            <div class="form-group">
+                {% if present == "TRUE" %}
+                <button class="btn btn-outline-info" type="submit" name="save" value="remove">Remove from watchlist</button>
+                {% else %}
+                <button class="btn btn-outline-info" type="submit" name="save" value="add">Add to watchlist</button>
+                {% endif %}
+            </div>
+        </form>
+        {% else %}
+        <p>To access watchlist <a href="{% url 'login' %}?next={% url 'movie-detail' current.title %}">Login</a> required</p>
+        {% endif %}
+        <h6 class="article-title">Genre: {{ current.genre }}</h6>
+        <!-- <p class="article-content">{{ current.genre }}</p> -->
+        <h6 class="article-title">Story:</h6>
+        <p class="article-content">{{ current.story }}</p>
+    </div>
+</article>
+<div class="alert alert-warning">
+    People who watched {{ current.title }} also watched
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+{% for movie in movies %}
+    <article class="media content-section col-md-6 w-75">
+        <img class="rounded article-img"  src="{{ movie.img_url }}" alt="movie_poster">
+        <div class="media-body">
+          <div class="article-metadata">
+            <h6 class="text-muted">{{ movie.rating }}<small>/10</small></h6>
+          </div>
+          <h6><a class="article-title" href="{% url 'movie-detail' movie.title %}">{{ movie.title }}</a></h6>
+          <!-- <p class="article-content">{{ movie.info }}</p> -->
+        </div>
+    </article>
+{% endfor %}
+</div>
+{% endblock body %}
