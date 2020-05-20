@@ -24,7 +24,7 @@ Navigate to the project directory and run server on your local host using comman
 python manage.py runserver
 ```
 
-## Algorithm Used for dataset training
+## Algorithm used for Dataset training
 
 ### Association Rule learning <p>
 Association rule learning is a rule-based machine learning method for discovering interesting relations
@@ -40,22 +40,19 @@ the database and extending them to larger and larger item sets as long as those 
 
 #### Support <p>
 Support is an indication of how frequently the itemset appears in the dataset</p>
-![](/res/support.png)
+![](/resources/support.png)
 
 #### Confidence <p>
 Confidence is an indication of how often the rule has been found to be true.</p>
-![](/res/confidence.png)
+![](/resources/confidence.png)
 
 #### Lift <p>
 It is defined as :
-![](/res/lift.png) </p>
+![](/resources/lift.png) </p>
 
 If the lift is > 1, that lets us know the degree to which those two occurrences are dependent on one another, and makes those rules potentially useful for predicting the consequent in future data sets.
 
 If the lift is < 1, that lets us know the items are substitute to each other. This means that presence of one item has negative effect on presence of other item and vice versa.
-
-### Algorithm
-![](/res/algo.png)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
