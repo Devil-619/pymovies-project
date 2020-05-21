@@ -60,11 +60,11 @@ Association rule learning is a rule-based machine learning method for discoverin
 between variables in large databases. It is intended to identify strong rules discovered in databases using
 some measures of interestingness.</p>
 
-### Apriori 
+### Apriori
 <p>
-Apriori uses a breadth-first search strategy to count the support of itemsets and 
+Apriori uses a breadth-first search strategy to count the support of itemsets and
 uses a candidate generation function which exploits the downward closure property of support.  
-In simple terms, it proceeds by identifying the frequent individual items in 
+In simple terms, it proceeds by identifying the frequent individual items in
 the database and extending them to larger and larger item sets as long as those item sets appear sufficiently often in the database.</p>
 
 #### Support <p>
@@ -83,5 +83,7 @@ If the lift is > 1, that lets us know the degree to which those two occurrences 
 
 If the lift is < 1, that lets us know the items are substitute to each other. This means that presence of one item has negative effect on presence of other item and vice versa.
 
+#### Apriori Flowchart
+![](/resources/flow.png)
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
