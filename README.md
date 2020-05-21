@@ -18,11 +18,40 @@ pip install -r requirements.txt
 
 ## Usage
 
-Navigate to the project directory and run server on your local host using command
+Navigate to the project directory
 
-```bash
-python manage.py runserver
-```
+- Create a admin using command
+    ```bash
+    python manage.py createsuperuser
+    ```
+- Create migrations and migrate using
+    ```bash
+    python manage.py makemigrations
+    python manage.py migrate
+    ```
+- Insert movie database in Movie model using the movies.json file by entering django shell
+
+    - Entering the shell
+        ```bash
+            python manage.py shell
+        ```
+    - Inserting movies in Movie Model
+        ```python
+            import json
+            form movies.models import Movie
+
+            with open('movies.json') as f:
+                movies_list = json.load(f)
+
+            for movie in movies_list:
+                movie = Movie(title=movie['title'], img_url=movie['img_url'], info=movie['info'], rating=movie['rating'], genre=movie['genre'], story=movie['story'])
+                movie.save()
+
+        ```
+- After all above steps run server on local machine using
+    ```bash
+        python manage.py runserver
+    ```
 
 ## Algorithm used for Dataset training
 
